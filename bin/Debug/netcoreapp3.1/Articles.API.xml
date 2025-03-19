@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Articles.API</name>
+    </assembly>
+    <members>
+        <member name="T:Articles.API.Controllers.ArticlesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Articles.API.Controllers.ArticlesController.#ctor(Articles.API.Domain.Services.ICategoryService,Articles.API.Domain.Services.IArticleService,Microsoft.Extensions.Logging.ILogger{Articles.API.Controllers.ArticlesController},AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="categoryService"></param>
+            <param name="articleService"></param>
+            <param name="logger"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:Articles.API.Controllers.ArticlesController.GetCategoriesAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Controllers.ArticlesController.GetArticlesAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Controllers.ArticlesController.GetCategoryArticlesAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Articles.API.Domain.Repositories.IArticleRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Articles.API.Domain.Repositories.IArticleRepository.ListAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Domain.Repositories.IArticleRepository.GetCategoryArticlesAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Domain.Repositories.IArticleRepository.FindByIdAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Articles.API.Domain.Repositories.ICategoryRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Articles.API.Domain.Repositories.ICategoryRepository.ListAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Domain.Repositories.ICategoryRepository.AddAsync(Articles.API.Domain.Models.Category)">
+            <summary>
+            
+            </summary>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Domain.Repositories.ICategoryRepository.FindByIdAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Domain.Repositories.ICategoryRepository.Update(Articles.API.Domain.Models.Category)">
+            <summary>
+            
+            </summary>
+            <param name="category"></param>
+        </member>
+        <member name="M:Articles.API.Domain.Repositories.ICategoryRepository.Remove(Articles.API.Domain.Models.Category)">
+            <summary>
+            
+            </summary>
+            <param name="category"></param>
+        </member>
+        <member name="T:Articles.API.Domain.Services.Communication.ArticleResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Articles.API.Domain.Services.Communication.ArticleResponse.ArticleCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Articles.API.Domain.Services.Communication.ArticleResponse.#ctor(Articles.API.Domain.Models.ArticleCategory)">
+            <summary>
+            Creates a success response.
+            </summary>
+            <param name="articleCategory">Saved article.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:Articles.API.Domain.Services.Communication.ArticleResponse.#ctor(System.String)">
+            <summary>
+            Creates an error response.
+            </summary>
+            <param name="message">Error message.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:Articles.API.Domain.Services.Communication.CategoryResponse.#ctor(Articles.API.Domain.Models.Category)">
+            <summary>
+            Creates a success response.
+            </summary>
+            <param name="category">Saved category.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:Articles.API.Domain.Services.Communication.CategoryResponse.#ctor(System.String)">
+            <summary>
+            Creates an error response.
+            </summary>
+            <param name="message">Error message.</param>
+            <returns>Response.</returns>
+        </member>
+        <member name="T:Articles.API.Domain.Services.IArticleService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Articles.API.Domain.Services.IArticleService.ListAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Domain.Services.IArticleService.GetCategoryArticlesAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Articles.API.Domain.Services.ICategoryService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Articles.API.Domain.Services.ICategoryService.ListAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Domain.Services.ICategoryService.SaveAsync(Articles.API.Domain.Models.Category)">
+            <summary>
+            
+            </summary>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Domain.Services.ICategoryService.UpdateAsync(System.Int32,Articles.API.Domain.Models.Category)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Domain.Services.ICategoryService.DeleteAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Articles.API.Middlewares.ExceptionMiddlewareExtentions">
+            <summary>
+            Extention method to add the middleware to the HTTP request pipline
+            </summary>
+        </member>
+        <member name="T:Articles.API.Persistence.Contexts.AppDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Articles.API.Persistence.Contexts.AppDbContext.Categories">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Articles.API.Persistence.Contexts.AppDbContext.ArticlesCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Articles.API.Persistence.Contexts.AppDbContext.Articles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Articles.API.Persistence.Contexts.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Articles.API.Persistence.Contexts.AppDbContext})">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Articles.API.Persistence.Contexts.AppDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:Articles.API.Persistence.Repositories.ArticleRepository.FindByIdAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Articles.API.Persistence.Repositories.ArticleRepository.ListAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Articles.API.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Articles.API.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Articles.API.Startup.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+        </member>
+        <member name="M:Articles.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Articles.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
